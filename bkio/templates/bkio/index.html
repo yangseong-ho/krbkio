@@ -1,0 +1,1211 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+	<script language="JavaScript" type="text/javascript">
+		var host = location.host.toLowerCase();
+		var currentAddress = location.href;
+		if (host.indexOf("www") == -1 && host.indexOf("kr") == -1 && host.indexOf("en") == -1) {
+			currentAddress = currentAddress.replace("//", "//www.");
+			location.href = currentAddress;
+		}
+	</script>
+	<script type="text/javascript" id="www-widgetapi-script" src="{% static 'bkio/js/www-widgetapi.js' %}" async=""></script>
+	<script src="https://www.youtube.com/iframe_api?v=3.1.12" id="YTAPI"></script>
+	<title>블루바이칼</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-sacle=1.0, maximum-scale=1.0, user-scalable=no">
+	
+	<meta http-equiv="X-UA-Compatible" acontent="IE=edge">
+	<!--파비콘-->
+	<link rel="shortcut icon" type="image/png" href="{% static 'bkio/img/favicon.png' %}" />
+	<!-- Bootstrap CSS -->
+	<link href="{% static 'bkio/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+
+	<!-- Font Awesome CSS -->
+	<link href="{% static 'bkio/css/notosanskr.css' %}" rel="stylesheet" type="text/css">
+
+	<!-- Include all css plugins (below), or include individual files as needed -->
+	<link href="{% static 'bkio/css/magnific-popup.css' %}" rel="stylesheet" type="text/css">
+	<!--	<link href="{% static 'bkio/css/commonv7.css' %}" rel="stylesheet" type="text/css">-->
+	<!-- Theme CSS -->
+	<link href="{% static 'bkio/css/theme.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'bkio/css/styles.css' %}" rel="stylesheet" type="text/css">
+    
+    <style>
+        
+        html, body 
+        {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        
+        /*-- 블록 설정 색상 start--*/
+        ::-moz-selection{
+                  background: #2850b7;
+                  color: #ffffff;
+        }
+        ::-webkit-selection{
+                  background: #2850b7;
+                  color: #ffffff;
+        }
+        ::selection{
+                  background: #2850b7;
+                  color: #ffffff;
+        }
+        /*--블록 설정 색상 end--*/
+
+
+    </style>
+
+</head>
+
+<body id="page-top" style="width:100%;">
+
+	<!--
+	<div class="pace  pace-inactive pace-inactive">
+		<div class="pace-progress bg-blue" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+			<div class="pace-progress-inner"></div>
+		</div>
+		<div class="pace-activity"></div>
+	</div>
+-->
+	<div class="modal fade" id="LoginModal" role="dialog" style="width:100% !important; margin:0px !important; padding:0% !important;">
+		<div class="modal-dialog modal-dialog-centered" style="width:80% !important; margin:0 auto;">
+			<img src="{% static 'bkio/img/modalview.png' %}" style="max-width:100%;"/>
+		</div>
+	</div>
+    
+    
+	<header class="header-light fixed-top" style="width:100%; height:4.5rem; -webkit-box-shadow: 7px 7px 16px -8px rgba(102,102,102,0.35);
+-moz-box-shadow: 7px 7px 16px -8px rgba(102,102,102,0.35);
+box-shadow: 7px 7px 16px -8px rgba(102,102,102,0.35);">
+		
+        <!--div class="row" style="display:flex; flex-direction:row;"-->
+            
+        <!-- Logo && Toggle -->
+        <div class="navbar-header">
+            <a class="navbar-brand page-scroll" href="#page-top">
+                <img src="{% static 'bkio/img/logo.png' %}" alt="" class="logo-text-dark" style="">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <img src="{% static 'bkio/img/navbar-toggler.svg' %}">
+                </span>
+            </button>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navbar-wrapper text-center" style="">
+            <!-- Menu -->
+            <div id="navigation" class="navbar navbar-expand-lg">
+                <div class="collapse navbar-collapse" id="navbar-header">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#project">PROJECT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#whitepaper">WHITEPAPER</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#roadmap">ROADMAP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#team">TEAM</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#contact">CONTACT</a>
+                        </li>
+                    </ul>
+
+                    <!-- ENG | KOR -->
+                    <div class="navbar-collapse" style="position:fixed; right:2rem; top:1.73rem;">
+                        <a class="nav-link page-scroll" href="//www.bluebaikal.io">
+                            <span class="text-small" style="color:#3984ff;"> ENG </span>
+                        </a>
+
+                        <span class="text-extra-small" style="color:#888; font-weight:lighter;"> | </span>
+
+                        <a class="nav-link page-scroll" href="//kr.bluebaikal.io">
+                            <span class="text-small" style="color:#3984ff;"> KOR </span>
+                        </a>
+                    </div>
+                </div>
+
+                
+                    
+
+            </div>           
+        </div>
+                      
+        <!--/div-->
+	</header>
+	<!-- Header Start -->
+
+
+    <!-- Main Visual (PC) Start -->
+    <div id="pc-carouselExampleIndicators" class="carousel slide" data-ride="carousel">    
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'bkio/img/00 main_1.png' %}" style="max-width:100%; max-height:100%; min-height: 400px; position: relative;" alt="First slide">
+
+                <div class="carousel-caption">
+                    <div>
+                        <h5 style="margin-bottom:.9rem; line-height:1.35; color:black;">소셜미디어</h5>
+                    </div>
+                    <div>
+                        <span class="text-medium" style="margin-bottom:1.65rem; color:#000;">
+                            블루바이칼에서 좋아하는 콘텐츠를 즐기고 공유하면서 BBC 토큰으로 보상 받으세요 !
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="{% static 'bkio/img/00 main_2.png' %}" style="max-width: 100%; height: auto; position: relative; min-height: 400px;" alt="Second slide">
+
+                <div class="carousel-caption">
+                    <h5 style="margin-bottom:.9rem; line-height:1.35; color:black;">디지털 콘텐츠 스토어</h5>
+                    <div>
+                        <span class="text-medium" style="margin-bottom:1.65rem; color:#000;">
+                            블루바이칼에서 얻은 BBC 토큰으로, 원하는 콘텐츠를 손쉽게 즐기세요 !
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="{% static 'bkio/img/00 main_3.png' %}" style="max-width: 100%; height: auto; position: relative; min-height: 400px;" alt="Third slide">
+
+                <div class="carousel-caption">
+                    <h5 style="margin-bottom:.9rem; line-height:1.35; color:black;">
+                        크라우드펀딩
+                    </h5>
+                    <div>
+                        <span class="text-medium" style="margin-bottom:1.65rem; color:#000;">
+                            블루바이칼에서 좋아하는 아티스트와 크리에이터, 프로젝트에 투자하고 국민 프로듀서가 되어보세요 !
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!--		1.35rem, 1.05rem, x-->
+            <div class="join-desc" style="background-color:#fff; position:absolute; left:8%; top:20%; padding:2.8%; border-radius: 20px; width:22%;">
+                <div>
+                    <h4 style="font-size: 1.35rem; font-weight:600; margin-bottom: .9rem; line-height: 1.35; color: inherit;">
+                        블루바이칼에 가입하고, <span style="color:#3984ff">100BBC</span>받으세요 !
+                    </h4>
+                </div>
+
+                <div>
+                    <h6 style="font-size: 1.05rem; font-weight:400; margin-bottom: 1.65rem; line-height: 1.7; color: inherit;">
+        				블루바이칼 서비스에 가입하고 100BBC 토큰을 받으세요. 100BBC를 활용해서 원하는 콘텐츠를 즐길 수 있습니다.
+                    </h6>
+                </div>
+
+                <a class="btn-join" data-toggle="modal" href="#LoginModal" style="">
+                    <div class="text-center text-medium" style="">
+                        블루바이칼 시작하기
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        
+        <ol class="carousel-indicators">
+            <li data-target="#pc-carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#pc-carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#pc-carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+    </div>
+    <!-- // Main Visual (PC) -->
+   
+    
+    <!-- Main Visual (Mobile) Start -->
+    <div id="m-carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active text-center" style="width:100%;">
+                <!--div class="carousel-caption" style="width:70%;">
+                    <div>
+                        <h5 style="margin-bottom:.9rem; line-height:1.35; color:black;">Social Media</h5>
+                    </div>
+                    <div>
+                        <span class="text-medium" style="margin-bottom:1.65rem; color:#000;">
+                            Enjoy, share your favorite contents and receive rewards!
+                        </span>
+                    </div>
+                </div-->
+                <img src="{% static 'bkio/img/main_m_1.png' %}" style="max-width:100%;" alt="First slide">
+            </div>
+
+            <div class="carousel-item text-center" style="width:100%;">
+                <!--div class="carousel-caption" style="width:70%;">
+                    <h5 style="margin-bottom:.9rem; line-height:1.35; color:black;">Digital Content Store</h5>
+                    <div>
+                        <span class="text-medium" style="margin-bottom:1.65rem; color:#000;">
+                            Access and enjoy contents by using BBC Tokens!
+                        </span>
+                    </div>
+                </div-->
+                <img src="{% static 'bkio/img/main_m_2.png' %}" style="max-width:100%;" alt="Second slide">
+            </div>
+
+            <div class="carousel-item text-center" style="width:100%;">
+                <!--div class="carousel-caption" style="width:70%;">
+                    <h5 style="margin-bottom:.9rem; line-height:1.35; color:black;">
+                        Crowdfunding
+                    </h5>
+                    <div>
+                        <span class="text-medium" style="margin-bottom:1.65rem; color:#000;">
+                            Invest to artists, creators, and projects to become a producer!
+                        </span>
+                    </div>
+                </div-->
+                <img src="{% static 'bkio/img/main_m_3.png' %}" style="max-width:100%;" alt="Third slide">
+            </div>
+            
+            <ol class="carousel-indicators">
+                <li data-target="#m-carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#m-carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#m-carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+
+
+            <!-- Join Blue Baikal --> 
+            <div class="text-center" style="width:75%; padding:6rem 0; margin:0 auto;">
+                <div>
+                    <h4 style="font-size: 1.35rem; font-weight:600; margin-bottom: .9rem; line-height: 1.35; color: inherit;">
+                        블루바이칼에 가입하고, <span style="color:#3984ff">100BBC</span>받으세요 !
+                    </h4>
+                </div>
+
+                <div>
+                    <h6 style="font-size:1.05rem; font-weight:400; margin-bottom:1.65rem; line-height: 1.7; color:inherit;">
+                        블루바이칼 서비스에 가입하고 100BBC 토큰을 받으세요. 100BBC를 활용해서 원하는 콘텐츠를 즐길 수 있습니다.
+                    </h6>
+                </div>
+
+                <a data-toggle="modal" href="#LoginModal" style="width: auto; height: auto; text-decoration:none;">
+                    <div class="text-center text-medium" style="border-radius:20px; width:100%; background-color: #3984ff; color: #fff; padding: 4%;">
+                        블루바이칼 시작하기
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <!-- // Main Visual (Mobile) -->
+    
+    
+    
+    
+    
+	<!--div id="visual-mobile" style="width:100%; height:auto;">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+           
+        </div>
+    </div-->
+   
+
+
+	<!--
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" ></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" ></span>
+    <span class="sr-only">Next</span>
+  </a>
+-->
+	<!--
+	<a href="http://www.naver.com" class="page-scroll btn btn btn-small btn-lg-large mt-4 mx-0">
+	<img src="img/00%20main_btn_signup.png"/></a>
+-->
+
+	<!--  start: BLUE BAIKAL PROJECT  -->
+	<section id="project" class="col-12" style="background-color:rgb(247,247,247,1); max-width:100%;">
+
+		<div class="justify-content-center" style="width:80%; margin:0 auto;">
+			<div class="text-center">
+                <h1 class="letter-spacing-1 text-uppercase"> BLUE BAIKAL PROJECT </h1>
+			</div>
+		</div> 
+
+		<container class="category text-center">
+			<div>
+				<h6> 영화 </h6>
+				<img style="max-width:100%; height:auto !important;" src="{% static 'bkio/img/01 project_icon_1.png' %}">
+			</div>
+
+			<div>
+				<h6> TV </h6>
+				<img style="max-width:100%; height:auto !important;" src="{% static 'bkio/img/01 project_icon_2.png' %}">
+			</div>
+
+			<div>
+				<h6> 게임 </h6>
+				<img style="max-width:100%; height:auto !important;" src="{% static 'bkio/img/01 project_icon_3.png' %}">
+			</div>
+
+			<div>
+				<h6> 음악 </h6>
+				<img style="max-width:100%; height:auto !important;" src="{% static 'bkio/img/01 project_icon_4.png' %}">
+			</div>
+
+			<div>
+				<h6> 도서 </h6>
+				<img style="max-width:100%; height:auto !important; " src="{% static 'bkio/img/01 project_icon_5.png' %}">
+			</div>
+            <br><br>
+		</container>
+       
+		<container class="project_info" style="margin:0 auto;">
+			<!--		padding:100px; padding-left:200;-->
+			<div class="project_img" style="">
+				<img src="{% static 'bkio/img/01 project_eco.png' %}" style="max-width:100%; height:auto;"/>
+			</div>
+			<!--			padding:200px; padding-left:0;-->
+
+			<div class="project_desc" style="">
+					<h3 class="mb-4">블록체인을 기반으로 한 엔터테인먼트 콘텐츠 플랫폼</h3>
+					
+                    <div class="text-medium" style="line-height:1.95rem;">
+						블루바이칼 서비스는 엔터테인먼트 콘텐츠 제작자와1인 미디어(인플루언서), 그리고 콘텐츠 소비자를 연결하는 블록체인 기반의 플랫폼입니다. 엔터테인먼트 산업의 성장과 이익 극대화, 참여자들의 정당한 이익 분배를 위한 이상적인 생태계를 지향합니다.
+					</div>
+			</div>
+
+		</container>
+
+		<!--
+		<div style="text-align: center;">
+			<img src="{% static 'bkio/img/project.png' %}" style="width:1920; height:1080;">
+		</div>
+-->
+	</section>
+    <!--   // end: BLUE BAIKAL PROJECT -->
+    
+    
+    <!-- start: HOW IT WORKS -->
+	<section id="how-it-works" class="col-12" style="">
+        <div class="row justify-content-center">
+            <div class="text-center">
+                <h1 class="letter-spacing-1 text-uppercase" style="color:#fff;"> HOW IT WORKS </h1>
+            </div>
+        </div> 
+        <container class="text-center" style="display:flex;">
+            <div class="ml-4 mr-4" style="">
+                <h4 class="partcipants-01 mb-4 text-white">콘텐츠 소비자</h4>
+                <!--				<iframe class="youtube" src="https://www.youtube.com/embed/Ey68aMOV9gc" style="width: 100%;height: 300px" frameborder="0" allow=" autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>-->
+                <img src="{% static 'bkio/img/01_3 intro_video.png' %}" style="max-width:100%; height:auto;" />
+
+                 <p class="mt-2 pb-0 mb-0">
+                    <span class="text-medium">
+                        콘텐츠 선택에 도움도 받고BBC토큰도 챙기세요. 토큰으로 콘텐츠 구매와 투자가 가능합니다.
+                    </span>
+                </p>
+            </div>
+
+            <div class="ml-4 mr-4" style="">
+                <h4 class="partcipants-02 mb-4"> 인플루언서 </h4>
+                <!--				<iframe class="youtube" src="https://www.youtube.com/embed/3LLjrHb5_bo" style="width: 100%; height: 300px" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>-->
+                <img src="{% static 'bkio/img/01_3 intro_video.png' %}" style="max-width:100%; height:auto;" />
+
+                 <p class="mt-2 pb-0 mb-0">
+                    <span class="text-medium">
+                        엔터테인먼트 분야에서 스타 인플루언서가 되어보세요. 블루바이칼이 지원해드립니다.
+                    </span>
+                </p>
+            </div>
+
+            <div class="ml-4 mr-4" style="">
+                <h4 class="partcipants-03 mb-4"> 콘텐츠 제작자 </h4>
+                <!--				<iframe class="youtube" src="https://www.youtube.com/embed/FKd_ks0rdAM" style="width: 100%; height: 300px" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>-->
+                <img src="{% static 'bkio/img/01_3 intro_video.png' %}" style="max-width:100%; height:auto;" />
+
+                <p class="mt-2 pb-0 mb-0">
+                    <span class="text-medium">
+                        제작비 마련부터 콘텐츠 홍보 및 판매까지, 블루바이칼 사용자의 서포트를 받으세요.
+                    </span>
+                </p>
+
+            </div>
+        </container>
+	</section>
+    <!--   // end: HOW IT WORKS  -->
+    
+   
+    
+    
+    <!-- start: WHITEPAPER -->
+	<section id="whitepaper" class="col-12" style="padding:0 !important">
+        <container style="">
+            
+            <div class="m-4" style="">
+                <div>
+                    <h5 class="m-0" style="font-weight:400; color:#fff;"> WHITE PAPER </h5>
+                </div>
+                
+                <!--a class="text-center m-2" href="{% static 'bkio/pdf/WhitePaper_BlueBaikal_v04.pdf' %}" target="_blank"-->
+                    <span class="btn-disabled text-center m-2"> ENG </span>
+                <!--/a-->
+                
+                <a class="text-center m-2" href="{% static 'bkio/pdf/WhitePaper_BlueBaikal_v04.pdf' %}" target="_blank">
+                    <span> KOR </span>
+                </a>
+            </div>
+
+            <!--span style="color:#ccc;">|</span-->
+
+            <div class="m-4" style="">
+                <div>
+                    <h5 class="m-0" style="font-weight:400; color:#fff;"> ONE PAGER </h5>
+                </div>
+
+                <!--a class="text-center m-2" href="{% static 'bkio/pdf/WhitePaper_BlueBaikal_v04.pdf' %}" target="_blank"-->
+                    <span class="btn-disabled text-center m-2"> ENG </span>
+                <!--/a-->
+                
+                <!--a class="text-center m-2" href="{% static 'bkio/pdf/WhitePaper_BlueBaikal_v04.pdf' %}" target="_blank"-->
+                    <span class="btn-disabled text-center m-2"> KOR </span>
+                <!--/a-->
+            </div>
+        </container>
+	</section>
+    <!--   // end: WHITEPAPER  -->
+
+	<!-- white paper
+ <section id="whitepaper" class="bg-img-cover bg-overlay-black-5">
+  <div class="container">
+    <div class="row justify-content-center justify-content-lg-end no-gutters">
+      <div class="col-lg-8 col-xl-6">
+        <div class="bg-white p-5 position-relative rounded">
+          <h3 class="font-alt font-w-700 letter-spacing-2 m-0 text-uppercase title-small">Whitepaper</h3>
+          <span class="d-block font-alt font-w-600 letter-spacing-1 mt-2 text-gray-800 text-small text-uppercase">De-/Re-construction of media power by decentralized network</span>
+          <span class="bg-red d-block mt-4 sep-line-medium-thick-long"></span>
+          
+          <div class="mt-5 mx-0">
+            <a href="http://www.level.foundation/static/level_en_full.pdf" target="_blank" class="btn btn-block btn-outline-black btn-large border-thick"><i class="fa fa-file"></i> English <br>(full version)</a>
+            <a href="http://www.level.foundation/static/level_kr_full.pdf" target="_blank" class="btn btn-block btn-outline-black btn-large border-thick"><i class="fa fa-file"></i> Korean <br>(full version)</a>
+
+          </div>
+          <div class="mt-2 mx-0 row">
+            <div class="col-xl-6 col-md-12 p-0 mx-0 my-1">
+              <a href="http://www.level.foundation/static/level_eng.pdf" target="_blank" class="btn btn-block btn-outline-black btn-large border-thick mx-0 btn-abs">English <br><small>(abstract version)</small></a></div>
+            <div class="col-xl-6 col-md-12 p-0 mx-0 my-1">
+              <a href="http://www.level.foundation/static/level_kr.pdf" target="_blank" class="btn btn-block btn-outline-black btn-large border-thick mx-0"> Korean <br><small>(abstract version)</small></a></div>
+          </div>
+
+
+        </div>
+        
+      </div>
+     
+    </div>
+  
+  </div>
+  
+</section>
+
+-->
+
+
+<!-- start: ROADMAP -->
+	<section id="roadmap" class="col-12">
+		<div class="col-lg-12 text-center">
+			<h1 class="letter-spacing-1 text-uppercase"> ROADMAP </h1>
+		</div>
+		<div id="roadmap-pc" class="text-center" style="width:52%; height:auto; margin:auto;">
+			<img src="{% static 'bkio/img/04 roadmap.png' %}" style="max-width:100%; height:auto !important;">
+		</div>
+        <div id="roadmap-m" class="text-center" style="width:80%; margin:auto;">
+			<img src="{% static 'bkio/img/04 roadmap_m.png' %}" style="max-width:100%; height:auto !important;">
+		</div>
+		<!--
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-xl-4">
+					<span class="d-block font-alt font-w-600 letter-spacing-1 text-black-200 text-small text-uppercase">
+						LAST UPDATE
+						<br> 2019-01-28
+					</span>
+					<span class="d-block font-alt font-w-600 letter-spacing-1 mt-2 title-small title-md-extra-large text-uppercase text-black">Roadmap</span>
+				</div>
+		
+				<div class="col-md-8 col-xl-8 mt-4 mt-md-0" id="timeline">
+					<ul class="timeline">
+						<li class="event" data-date="2018 4Q">
+							<br>
+							<img src="{% static 'bkio/img/04%20roadmap_1.png' %}">
+							<h1>2018 4Q</h1>
+							<h3>소셜 서비스 Beta 버전 개발 완료</h3>
+							<p>스팀 블록체인 기반</p>
+						</li>
+						<li class="event" data-date="2019 1Q">
+							<br>
+							<img src="{% static 'bkio/img/04%20roadmap_2.png' %}">
+							<h1>2019 1Q</h1>
+							<h3>소셜 서비스 리뉴얼, 토큰 상장</h3>
+							<p>하이퍼 레저</p>
+						</li>
+						<li class="event" data-date="2019 2Q">
+							<br>
+							<img src="{% static 'bkio/img/04%20roadmap_3.png' %}">
+							<h1>2019 2Q</h1>
+							<h3>바이칼 플랫폼 정식 오픈</h3>
+							<p>메인넷 전환</p>
+							<p>마케팅 서비스 오픈</p>
+						</li>
+						<li class="event" data-date="2019 3Q">
+							<br>
+							<img src="{% static 'bkio/img/04%20roadmap_3.png' %}">
+							<h1>2019 3Q</h1>
+							<h3>배당개시</h3>
+						</li>
+						<li class="event" data-date="2019 4Q">
+							<br>
+							<img src="{% static 'bkio/img/04%20roadmap_3.png' %}">
+							<h1>2019 4Q</h1>
+							<h3>플랫폼 기능 강화</h3>
+							<p>콘텐츠 스토어 오픈</p>
+							<p>STO중개 거래소 오픈</p>
+						</li>
+						<li class="event" data-date="2020 2Q">
+							<br>
+							<img src="{% static 'bkio/img/04%20roadmap_3.png' %}">
+							<h1>2020 2Q</h1>
+							<h3>사용자 분석 강화</h3>
+							<p>인공지능, 빅데이터</p>
+						</li>
+					</ul>
+
+				</div>
+		
+			</div>
+				</div>
+-->
+
+	</section>
+    <!-- end: ROADMAP -->
+    
+    
+    
+    <!-- start: TEAM -->
+	<section id="team" class="col-12 text-center" style="background-color: rgb(247,247,247,1);">
+		<container>
+			<div>
+				<div>
+					<h1 class="letter-spacing-1 text-uppercase"> CORE MEMBERS </h1>
+				</div>
+				<!-- //.col-lg-6 -->
+			</div>
+			<!-- //.row -->
+
+            
+            <!--  대표님들  -->
+			<div class="row justify-content-center text-center">
+				<!-- 장훈 대표님 -->
+                <div class="team-block ml-3 mr-3">
+					<figure class="pb-3 position-relative">
+						<img src="{% static 'bkio/img/05 team_1.png' %}" alt="" class="img-fluid">
+					</figure>
+
+					<div>
+						<h5 class="pb-1">
+							Clark Jang
+						</h5>
+						<span class="d-block text-medium" style="color:#3a2197; line-height:1.55rem !important;">
+							Project Owner
+						</span>
+					</div>
+				</div>
+                <!-- //장훈 대표님 -->
+                
+				<!-- 김만호 대표님 -->
+                <div class="team-block ml-3 mr-3">
+					<figure class="pb-3 position-relative">
+						<img src="{% static 'bkio/img/05 team_2.png' %}" alt="" class="img-fluid">
+					</figure>
+
+					<div>
+						<h5 class="pb-1">
+							Eric Kim
+						</h5>
+						<span class="d-block text-medium" style="color:#3a2197; line-height:1.55rem !important;">
+							전략 및 사업 개발
+						</span>
+					</div>
+					<!-- //.py-4 -->
+				</div>
+                <!-- //김만호 대표님 -->
+
+				<!-- Sean 대표님 -->
+                <div class="team-block ml-3 mr-3">
+					<figure class="pb-3 position-relative">
+						<img src="{% static 'bkio/img/05 team_3.png' %}" alt="" class="img-fluid">
+					</figure>
+
+					<div>
+						<h5 class="pb-1">
+							Sean Choi
+						</h5>
+						<span class="d-block text-medium" style="color:#3a2197; line-height:1.55rem !important;">
+							글로벌 서비스 사업
+						</span>
+					</div>
+					<!-- //.py-4 -->
+				</div>
+				<!-- //Sean 대표님 -->
+            </div>
+            <!--  //대표님들  -->
+                
+            
+            <!-- STAFF >    
+            <div class="row justify-content-center text-center">
+                <!-- staff 1 >
+                <div class="ml-3 mr-3" style="width:15%;">
+                    <figure class="pb-3 position-relative">
+                        <img src="{% static 'bkio/img/05 team_4.png' %}" alt="" class="img-fluid" style="width:80%;">
+                    </figure>
+
+                    <div>
+						<h5 class="pb-1">
+                            Seongho Yang
+                        </h5>
+                        <span class="d-block text-medium" style="color:#3a2197; line-height:1.55rem !important;">
+                            Blockchain & Web Developer
+                        </span>
+                    </div>
+                </div>
+                <!-- //staff 1 >
+
+                <!-- staff 2 >
+                <div class="ml-3 mr-3" style="width:15%;">
+                    <figure class="pb-3 position-relative">
+                        <img src="{% static 'bkio/img/05 team_3.png' %}" alt="" class="img-fluid" style="width:80%;">
+                    </figure>
+
+                   <div>
+						<h5 class="pb-1">
+                            Hyejin Lee
+                        </h5>
+                        <span class="d-block text-medium" style="color:#3a2197; line-height:1.55rem !important;">
+                            Web Developer
+                        </span>
+                    </div>
+                </div>
+                <!-- //staff 2 >
+
+                <!-- staff 3 >
+                <div class="ml-3 mr-3" style="width:15%;">
+                    <figure class="pb-3 position-relative">
+                        <img src="{% static 'bkio/img/05 team_3.png' %}" alt="" class="img-fluid" style="width:80%;">
+                    </figure>
+
+                    <div>
+						<h5 class="pb-1">
+                            Kyeongwoo Lim
+                        </h5>
+                        <span class="d-block text-medium" style="color:#3a2197; line-height:1.55rem !important;">
+                            Visual Designer
+                        </span>
+                    </div>
+                </div>
+                <!-- //staff 3 >
+
+                <!-- staff 4 >
+                <div class="ml-3 mr-3" style="width:15%;">
+                    <figure class="pb-3 position-relative">
+                        <img src="{% static 'bkio/img/05 team_3.png' %}" alt="" class="img-fluid" style="width:80%;">
+                    </figure>
+
+                    <div>
+						<h5 class="pb-1">
+                            Mil Park
+                        </h5>
+                        <span class="d-block text-medium" style="color:#3a2197; line-height:1.55rem !important;">
+                            UX/UI Designer
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- //STAFF --> 
+   
+		</container>
+		<!-- //.container -->
+	</section>
+    <!-- end: TEAM -->
+    
+
+	    
+    <!-- start: ADVISORS -->
+	<section id="team" class="col-12 pt-0 mt-0 text-center" style="background-color: rgb(247,247,247,1);">
+		<container>
+			<div>
+				<div>
+					<h1 class="letter-spacing-1 text-uppercase"> ADVISORS </h1>
+				</div>
+				<!-- //.col-lg-6 -->
+			</div>
+			<!-- //.row -->
+            
+            <!-- #ADVISORS -->
+            <div class="advisors row justify-content-center text-center">
+                <!-- Advisor 1 -->
+                <div class="team-block mb-6">
+                    <figure class="pb-3 position-relative">
+                        <img src="{% static 'bkio/img/06 advisor_1.png' %}" alt="" class="img-fluid">
+                    </figure>
+
+                    <div>
+                        <h5 class="pb-1">
+                            Valery Markarov
+                        </h5>
+                        <span class="d-block text-medium" style="color:#3a2197; line-height:1.55rem !important;">
+                            Content Business
+                        </span>
+                        <span class="d-block text-small mt-2" style="">
+                            Business Developement Director, 
+                            <br>
+                            Super.com & protocol.One
+                        </span>
+                    </div>
+                </div>
+                <!-- //Advisor 1 -->
+
+                <!-- Advisor 2 -->
+                <div class="team-block mb-6">
+                    <figure class="pb-3 position-relative">
+                        <img src="{% static 'bkio/img/06 advisor_2.png' %}" alt="" class="img-fluid">
+                    </figure>
+
+                    <div>
+                        <h5 class="pb-1">
+                            Sutthipong Kuruhongsa
+                        </h5>
+                        <span class="d-block text-medium" style="color:#3a2197; line-height:1.55rem !important;">
+                            Technology 
+                            <br>
+                            (AI & Data field)
+                        </span>
+                        <span class="d-block text-small mt-2" style="">
+                            Chief Executive Officer & Founder, 
+                            <br>
+                            Digital Dialogue
+                        </span>
+                    </div>
+                    <!-- //.py-4 -->
+                </div>
+                <!-- //Advisor 2 -->
+
+                <!-- Advisor 3 -->
+                <div class="team-block mb-6">
+                    <figure class="pb-3 position-relative">
+                        <img src="{% static 'bkio/img/06 advisor_3.png' %}" alt="" class="img-fluid">
+                    </figure>
+
+                    <div>
+                        <h5 class="pb-1">
+                            Coven Jung
+                        </h5>
+                        <span class="d-block text-medium" style="color:#3a2197; line-height:1.55rem !important;">
+                            System Architect & IT
+                        </span>
+                        <span class="d-block text-small mt-2" style="">
+                            CEO, Greenland
+                        </span>
+                    </div>
+                </div>
+                <!-- //Advisor 3 -->
+
+                 <!-- Advisor 7 -->
+                 <div class="team-block">
+                    <figure class="pb-3 position-relative">
+                        <img src="{% static 'bkio/img/06 advisor_7.png' %}" alt="" class="img-fluid">
+                    </figure>
+
+                    <div>
+                        <h5 class="pb-1">
+                            Chris Jang
+                        </h5>
+                        <span class="d-block text-medium" style="color:#3a2197; line-height:1.55rem !important;">
+                            Entertainment Content
+                        </span>
+                        <span class="d-block text-small mt-2" style="">
+                            CEO & Founder, 
+                            <br>
+                            Revolution Media
+                        </span>
+                    </div>
+                </div>
+                <!-- //Advisor 7 -->
+
+                <!-- Advisor 4 -->
+                <div class="team-block">
+                    <figure class="pb-3 position-relative">
+                        <img src="{% static 'bkio/img/06 advisor_4.png' %}" alt="" class="img-fluid">
+                    </figure>
+
+                    <div>
+                        <h5 class="pb-1">
+                            Sungjin Kim
+                        </h5>
+                        <span class="d-block text-medium" style="color:#3a2197; line-height:1.55rem !important;">
+                            Marketing & 
+                            <br>
+                            Game Operating
+                        </span>
+                        <span class="d-block text-small mt-2" style="">
+                            Co-founder, Greenland
+                        </span>
+                    </div>
+                </div>
+                <!-- //Advisor 4 -->
+
+                <!-- Advisor 5 -->
+                <div class="team-block">
+                    <figure class="pb-3 position-relative">
+                        <img src="{% static 'bkio/img/06 advisor_5.png' %}" alt="" class="img-fluid">
+                    </figure>
+
+                   <div>
+                        <h5 class="pb-1">
+                            Joong Heon Kim
+                        </h5>
+                        <span class="d-block text-medium" style="color:#3a2197; line-height:1.55rem !important;">
+                            Deep Learning 
+                            <br>
+                            & Privacy Preserving
+                        </span>
+                        <span class="d-block text-small mt-2" style="">
+                            Assistant Professor,
+                            <br>
+                            Chung-Ang University
+                        </span>
+                    </div>
+                </div>
+                <!-- //Advisor 5 -->
+
+                <!-- Advisor 6 -->
+                <!--div class="team-block ml-3 mr-3">
+                    <figure class="pb-3 position-relative">
+                        <img src="{% static 'bkio/img/06 advisor_6.png' %}" alt="" class="img-fluid">
+                    </figure>
+
+                    <!--div>
+                        <h5 class="pb-1">
+                            Jason Lim
+                        </h5>
+                        <span class="d-block text-medium" style="color:#3a2197; line-height:1.55rem !important;">
+                            Marketing
+                        </span>
+                        <span class="d-block text-small mt-2" style="">
+                            Co-founder, Tensor
+                        </span>
+                    </div>
+                </div>
+                <!-- //Advisor 6 -->
+            </div>
+            <!-- //ADVISORS --> 
+        </container>
+    </section>
+    
+    
+
+
+
+
+
+	<!-- Section - Partners Start // 20180801 UPDATE -->
+	<!-- 파트너 임시 보류 이메일 부분까지 전부다 막>
+<section id="partners" class="bg-white">
+  <div class="container">
+    <div class="row justify-content-center mb-1">
+      <div class="col-lg-6 text-center mb-3 mb-lg-5">
+        <h3 class="font-alt font-w-700 letter-spacing-2 m-0 text-uppercase title-large">Partners</h3>
+
+        <span class="bg-red d-block mt-4 mx-auto sep-line-medium-thick-long"></span>
+      </div>
+
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="row">
+          <div class="col-6 col-sm-4 col-md-3 text-center mb-3">
+            <a href="https://www.tobigca.org/" target="_blank"> 
+            <img src="img/06%20partners_1.png" class="p-logo img-fluid"></a>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 text-center mb-3">
+            <a href="https://gameflip.com/" target="_blank"> 
+            <img src="img/06%20partners_2.png" class="p-logo img-fluid"></a>
+          </div>
+          
+    
+          <div class="col-6 col-sm-4 col-md-3 text-center mb-3">
+            <a href="https://webloc.io/" target="_blank"> <img src="http://www.level.foundation/static/images/p_webloc.png" class="p-logo img-fluid"></a>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 text-center mb-3">
+            <a href="http://dable.io/ko/" target="_blank"> <img src="http://www.level.foundation/static/images/p_dable.png" class="p-logo img-fluid"></a>
+          </div>
+     
+        </div>
+      </div>
+    -->
+	<!-- 이메일
+      <div class="col-lg-10 mt-5">
+        <div class="row">
+          <div class="col-lg-12 col-xl-12 text-center">
+            <h3 class="font-alt m-0 title-small">For general enquiries about partner, please contact us</h3>
+            <span class="d-block font-alt font-w-600 letter-spacing-1 mt-2 text-gray-800 text-medium">
+                    <a href="mailto:support@level.foundation" class="text-red">support@level.foundation </a>
+                    </span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+ </section>
+-->
+	<!--white list 기능-->
+	<!--
+<section id="whitelist" class="bg-img-cover bg-overlay-blue-7">
+  <div class="container">
+    <div class="row no-gutters">
+      <div class="col-lg-6 col-xl-5">
+        <div class="bg-white p-5 position-relative rounded">
+          <h3 class="font-alt font-w-700 letter-spacing-2 m-0 text-uppercase title-small"> Whitelist
+          </h3>
+          <span class="d-block font-alt font-w-600 letter-spacing-1 mt-2 text-gray-800 text-small text-uppercase">Sign up for early access to the LEVEL Whitelist</span>
+          <span class="bg-blue d-block mt-4 sep-line-medium-thick-long"></span>
+
+          <form action="contact/send_mail_ticket.php" method="post" id="myform" name="myform" class="mt-4">
+            <div class="form-group">
+              <input type="text" id="first_name" name="first_name" class="font-alt form-control required" placeholder="First name">
+            </div>
+
+
+            <div class="form-group">
+              <input type="text" id="last_name" name="last_name" class="font-alt form-control required" placeholder="Last name">
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="email" name="email" class="font-alt form-control required email" placeholder="Your Email">
+            </div>
+
+            <div class="form-group">
+              <input type="text" id="country" name="country" class="font-alt form-control required" placeholder="Country">
+            </div>
+
+            <span class="d-block font-alt font-w-600 letter-spacing-1 text-extra-small text-uppercase">*Please complete all fields correctly</span>
+            <button type="submit" id="c_submit" name="c_submit" class="btn btn-small btn-lg-medium btn-blue mt-4">Submit</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+-->
+
+   
+    <!-- start: CONTACT -->
+	<section id="contact" class="col-12">
+        <!-- consist of 2 divs: info && message form -->
+		<container>
+            <!-- 1. info -->
+            <div class="info" style="">
+                <!--h1 class="mb-4 letter-spacing-1 text-uppercase"> Contact </h1-->
+                <span class="letter-spacing-1 text-uppercase" style="font-size:2.3rem; font-weight:700;">
+                    Contact
+                </span>
+                
+                <div class="mt-3">
+                    <div class=""> 
+                        <h5 class="mb-6" style="line-height:1.9rem !important; text-decoration-line:underline;">
+                            For more information,
+                            <br>
+                            please contact us !
+                        </h5>
+
+                        <!--h6 class="text-large m-0" style="color:#2850b7;">E-MAIL</h6-->
+                        <span class="mb-4 d-block text-medium letter-spacing-1">
+                            <a href="mailto:info@bluebaikal.com" class="text-gray-800">info@bluebaikal.com </a>
+                        </span>
+
+                        <div class="sns-channel" style="display:flex;">
+                            <div>
+                                <!--
+                                <a href="https://t.me" class="text-gray-600"><img src="{% static 'bkio/img/07 contact_sns_1.png' %}" style="width: 45px; height: 45px;">
+                                </a>
+-->
+                                <a data-toggle="modal" href="#LoginModal" class="text-gray-600">
+                                    <img src="{% static 'bkio/img/07 contact_sns_1_2.png' %}" style="width:3rem;">
+                                </a>&emsp;
+                            </div>
+
+                            <div>
+                                <!--
+                                <a href="https://www.facebook.com/" class="text-gray-600">
+                                    <img src="{% static 'bkio/img/07 contact_sns_2.png' %}" style="width: 45px; height: 45px;">
+                                </a>
+-->
+                                <a data-toggle="modal" href="#LoginModal" class="text-gray-600">
+                                    <img src="{% static 'bkio/img/07 contact_sns_2_2.png' %}" style="width:3rem;">
+                                </a>&emsp;
+                            </div>
+
+                            <div>
+                                <!--
+                                <a href="https://twitter.com/" class="text-gray-600">
+                                    <img src="{% static 'bkio/img/07 contact_sns_3.png' %}" style="width: 45px; height: 45px;">
+                                </a>
+-->
+                                <a data-toggle="modal" href="#LoginModal" class="text-gray-600">
+                                    <img src="{% static 'bkio/img/07 contact_sns_3_2.png' %}" style="width:3rem;">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- //1. info -->
+
+            
+            <!-- 2. message form -->
+			<div class="message-form" style="">
+				<div class="form-stroke" style="">
+					<br>
+                    <form action="https://formspree.io/ysh827@goboogiegames.com" method="post" id="myform" name="myform">
+
+						<div class="form-group">
+							<input type="text" id="name" name="name" class="text-medium form-control required name" placeholder="name" style="border-top: 0; border-left: 0; border-right: 0; border-color: lightskyblue; width: 100%; height: 20px;">
+						</div><br>
+						<div class="form-group">
+							<input type="email" id="email" name="email" class="text-medium form-control required email" placeholder="Email" style="width: auto; border-top: 0; border-left: 0; border-color: lightskyblue; border-right: 0; width: 100%; height: 20px;">
+						</div><br>
+						<div class="form-group">
+							<input type="text" id="subject" name="subject" class="text-medium form-control required subject" placeholder="subject" style="border-top: 0; border-left: 0; border-right: 0; border-color:lightskyblue; width:100%; height: 20px;">
+						</div><br>
+						<div class="form-group">
+							<!--						<div style="font-family: sans-serif ; color: darkgray;"><strong>Message</strong></div>-->
+
+							<textarea type="textarea" cols="40" rows="8" id="message" name="message" class="text-medium form-control required message" style="height:200px; width: 100%; border-color: lightskyblue;" placeholder="Message"></textarea>
+						</div>
+						<!--
+
+            <span class="d-block font-alt font-w-600 letter-spacing-1 text-extra-small text-uppercase">*Please complete all fields correctly</span>
+-->
+						<div class="mt-5" style="text-align:center;">
+							<div class="submit-wrap"> 
+								<input class="text-medium" type="submit" value="Send" style="">
+								<!--					style="background-image: url({% static 'bkio/img/07 contact_btn_send.png' %})"-->
+							</div>
+						</div>
+						<br>
+					</form>
+				</div>
+			</div>
+            <!-- //2. message form -->
+            
+		</container>
+		<!-- //.container -->
+	</section>
+    <!-- end: CONTACT -->
+
+	<!-- Footer Start -->
+	<footer class="py-5 col-12" style="background: url({% static 'bkio/img/07 footer_bg.png' %}) no-repeat; background-size:cover; height:auto; justify-content:center;">
+		
+        <container style="margin:0 auto; width:100%;" class="row justify-content-center">
+			<div class="" style="flex:0; width:100%; display:flex;">
+				<div class="text-center" style="width:18rem;">
+                    <img src="{% static 'bkio/img/07 footer_logo.png' %}" style="width:12rem; height:auto;">
+                    <div class="mt-4 letter-spacing-1 text-extra-small" style="color:#cecece;">
+                        &copy; 2019 BLUE BAIKAL. All rights reserved.
+                    </div>
+				</div>
+			</div>
+		</container>
+	</footer>
+
+
+	<!-- Scroll to top -->
+	<!--
+	<div class="page-scroll scroll-to-top">
+		<a href="https://open.kakao.com">
+			<img src="{% static 'bkio/img/kakao.png' %}">
+		</a>
+		<a href="https://t.me/">
+			<img src="{% static 'bkio/img/Telegram_logo.png' %}">
+		</a>
+	</div>
+-->
+
+
+	<!-- Main JS -->
+	<script src="{% static 'bkio/js/jquery.min.js' %}"></script>
+	<script src="{% static 'bkio/js/popper.min.js' %}"></script>
+	<script src="{% static 'bkio/js/bootstrap.min.js' %}"></script>
+
+	<!-- Include all js plugins (below) -->
+	<script src="{% static 'bkio/js/pace.min.js' %}"></script>
+	<script src="{% static 'bkio/js/jquery.easing.min.js' %}"></script>
+	<script src="{% static 'bkio/js/jquery.matchHeight.min.js' %}"></script>
+	<script src="{% static 'bkio/js/jquery.inview.min.js' %}"></script>
+	<script src="{% static 'bkio/js/jquery.countTo.js' %}"></script>
+	<script src="{% static 'bkio/js/imagesloaded.pkgd.min.js' %}"></script>
+	<script src="{% static 'bkio/js/isotope.pkgd.min.js' %}"></script>
+	<script src="{% static 'bkio/js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'bkio/js/jquery.validate.min.js' %}"></script>
+
+	<!--
+	<script>
+		$(document).ready(function() {
+			$("#c_submit").on("click", function() {
+				//e.preventDefault();
+				// $('#subscribe').modal('hide');
+
+				var email = document.getElementById("email").value;
+
+				var name = document.getElementById("name").value;
+
+				var subject = document.getElementById("subject").value;
+
+				var message = document.getElementById("message").value;
+
+				var params = "email=" + email + "&name=" + name + "&subject=" + subject + "&message=" + message;
+
+				var win = window.open("/email?" + params, "popup_window", "width=500, height=300, scrollbars=no");
+
+				document.location.href = "/";
+				return false;
+			});
+		});
+	</script>
+-->
+
+
+	<!-- BG - Video (YouTube) -->
+	<script src="{% static 'bkio/js/jquery.mb.YTPlayer.min.js' %}"></script>
+
+	<!-- Theme JS -->
+	<script src="{% static 'bkio/js/theme.js' %}"></script>
+
+</body>
+
+</html>
